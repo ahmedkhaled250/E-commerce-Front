@@ -1,13 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+:root {
+  --main-color: #0aad0a;
+  --main-color-hover: #0bdf0b;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
+}
+.navbar-nav .nav-link.active {
+  color: #fff !important;
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+.navbar-nav .nav-subCategory.active {
+  color: #fff !important;
+  background-color: var(--main-color);
+  margin: 5px 0px;
+  border-radius: 5px;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family) !important;
+}
+.rating-color {
+  color: var(--rating-color);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+.vh-75 {
+  height: 70vh;
+}
+.order{
+    box-shadow: var(--shadow);
+  border: solid 1px var(--main-color);
+}
+.product:hover {
+  box-shadow: var(--shadow);
+  border: solid 1px var(--main-color);
+}
+.bg-main-color-hover {
+  background-color: var(--main-color-hover);
+}
+.mb-10{
+  margin-bottom: 130px;
+}
+.product{
+  position: relative;
+}
+.product .fa-heart {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0;
+  color: var(--main-color);
+  transition: all 0.5s;
+}
+.product:hover .fa-heart {
+  top: 20px;
+  opacity: 1;
+}
+.product .btn {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.font-sm {
+  font-size: 14px;
+}
+.text-main {
+  color: var(--main-color);
+  transition: color 0.3s;
+}
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+.w-40 {
+  width: 40%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-10{
+  width: 10%;
+}
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+.input-focus:focus {
+  border: var(--main-color) 1px solid !important;
+  box-shadow: none !important;
+}
+.category:hover .layer {
+  top: 0;
+  transition: top 0.3s;
+}
+.category:hover .layer h3 {
+  right: 0%;
+  transition: right 0.3s 0.3s;
+}
+.category .layer {
+  top: 100%;
+  background-color: rgba(34, 34, 34, 0.5);
+}
+.category .layer h3 {
+  right: 100%;
+  background-color: rgba(34, 34, 34, 0.7);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.stars input[type=radio]{
+  display: none;
+}
+.star{
+  cursor: pointer;
+}
+.img1{
+    height: 400px;
+}
+.smallImg{
+    height: 200px;
 }
